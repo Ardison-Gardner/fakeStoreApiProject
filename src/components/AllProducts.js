@@ -1,12 +1,11 @@
-const AllProducts = ({ products, title }) => {
-  console.log("AllProducts: ", products);
+const AllProducts = ({ products }) => {
   return (
     <div className="product-list">
-      <h2>{title}</h2>
+      <h1>All Products</h1>
       {products.map((product) => (
         <div className="product-preview" key={product.id}>
           <h2>{product.title}</h2>
-          <p>{product.price}</p>
+          <p>{product.description}</p>
         </div>
       ))}
     </div>

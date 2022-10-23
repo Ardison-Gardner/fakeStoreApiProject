@@ -1,26 +1,18 @@
-import { useState, useEffect } from "react";
 import AllProducts from "./AllProducts";
+import useFetch from "../hooks/useFetch";
 
 const Home = () => {
-  const [products, setProducts] = useState(null);
-
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Could not fetch data for this resource!");
-        }
-        return res.json();
-      })
-      .then((products) => {
-        setProducts(products);
-      });
-  }, []);
+  const {
+    data: products,
+    pending,
+    error,
+  } = useFetch("https://fakestoreapi.com/products");
 
   return (
     <div className="home">
-      <h1>HOME</h1>
-      {products && <AllProducts products={products} title="All Products" />}
+      {error && <div>{error}</div>}
+      {pending && <div>Loading...</div>}
+      {products && <AllProducts products={products} />}
     </div>
   );
 };
