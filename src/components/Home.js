@@ -12,7 +12,7 @@ const Home = () => {
     <div className="home">
       {error && <div>{error}</div>}
       {pending && <div>Loading...</div>}
-      {products && <AllProducts products={products} />}
+      {!!products.length && <AllProducts products={products} />}
     </div>
   );
 };
