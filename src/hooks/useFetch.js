@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const useFetch = (url) => {
   const [data, setData] = useState([]);
   const [pending, setPending] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setTimeout(() => {
@@ -17,6 +17,7 @@ const useFetch = (url) => {
         .then((data) => {
           setPending(false);
           setData(data);
+          console.log(data);
           setError(null);
         })
         .catch((err) => {

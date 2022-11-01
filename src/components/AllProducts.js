@@ -1,13 +1,18 @@
+import "./styles/AllProducts.css";
+
 const AllProducts = ({ products }) => {
   return (
-    <div className="product-list">
+    <div>
       <h1>All Products</h1>
-      {products.map((product) => (
-        <div className="product-preview" key={product.id}>
-          <h2>{product.title}</h2>
-          <p>{product.description}</p>
-        </div>
-      ))}
+      <div className="product-list">
+        {products.map((product) => (
+          <div className="product-preview" key={product.id}>
+            <img src={product.image} />
+            <h2>{product.title}</h2>
+            <p>{product.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

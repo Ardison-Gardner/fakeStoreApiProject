@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  flexwrap: nowrap;
+}
+
+.product-preview > img {
+  width: 100%;
+}
