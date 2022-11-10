@@ -5,9 +5,18 @@ h1 {
 .product-list {
   display: flex;
   flex-direction: column;
-  flexwrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.product-preview {
+  border: 1px solid black;
+  width: 90%;
+  padding: 10px 20px;
+  margin: 20px 0;
 }
 
 .product-preview > img {
-  width: 100%;
+  max-height: 200px;
+  max-width: 100%;
 }
