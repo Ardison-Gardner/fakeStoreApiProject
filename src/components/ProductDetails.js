@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 
+//change function to ProductView
+
 const ProductDetails = () => {
   const { id } = useParams();
   const {

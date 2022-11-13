@@ -1,15 +1,18 @@
+import { formatDollars } from "../utils/utils";
 import "./styles/AllProducts.css";
 
+// add formatting function to import
+
 const AllProducts = ({ products }) => {
+  console.log();
   return (
     <div>
-      <h1>All Products</h1>
       <div className="product-list">
         {products.map((product) => (
           <div className="product-preview" key={product.id}>
             <img src={product.image} />
             <h2>{product.title}</h2>
-            <p>{product.price}</p>
+            <p>{formatDollars(product.price)}</p>
           </div>
         ))}
       </div>
