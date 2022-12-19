@@ -3,7 +3,7 @@ import useFetch from "../hooks/useFetch";
 
 //change function to ProductView
 
-const ProductDetails = () => {
+const ProductView = () => {
   const { id } = useParams();
   const {
     data: product,
@@ -12,10 +12,10 @@ const ProductDetails = () => {
   } = useFetch("https://fakestoreapi.com/products/" + id);
 };
 
-const ProductDetails = () => {
-  <div className="product-details">
-    {isPending && <div>Loading...</div>}
+const ProductView = () => {
+  <div className="product-view">
     {error && <div>{error}</div>}
+    {isPending && <div>Loading...</div>}
     {product && (
       <div>
         <img src={product.image} />
@@ -27,4 +27,4 @@ const ProductDetails = () => {
   </div>;
 };
 
-export default ProductDetails;
+export default ProductView;

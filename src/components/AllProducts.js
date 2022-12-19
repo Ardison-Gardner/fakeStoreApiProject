@@ -11,8 +11,10 @@ const AllProducts = ({ products }) => {
         {products.map((product) => (
           <div className="product-preview" key={product.id}>
             <img src={product.image} />
-            <h2>{product.title}</h2>
-            <p>{formatDollars(product.price)}</p>
+            <div className="product-details">
+              <h4>{product.title}</h4>
+              <h6>{formatDollars(product.price)}</h6>
+            </div>
           </div>
         ))}
       </div>

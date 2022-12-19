@@ -6,13 +6,13 @@ const Home = () => {
     data: products,
     pending,
     error,
-  } = useFetch("https://fakestoreapi.com/products");
+  } = useFetch("https://fakestoreapi.com/products?limit=40");
 
   return (
     <div className="home">
-      {error && <div>{error}</div>}
-      {pending && <div>Loading...</div>}
-      {!!products.length && <AllProducts products={products} />}
+      {error ? <div>{error}</div> : null}
+      {pending ? <div>Loading...</div> : null}
+      {products ? <AllProducts products={products} /> : null}
     </div>
   );
 };

@@ -11,3 +11,8 @@ nav {
 h1 {
   padding: 30px;
 }
+
+.links {
+  margin-left: auto;
+  color: white;
+}
