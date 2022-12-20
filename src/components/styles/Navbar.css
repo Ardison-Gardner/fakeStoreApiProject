@@ -1,18 +1,30 @@
 nav {
   display: flex;
-  background: black;
   color: white;
-  border-bottom: 2px solid red;
+  background: black;
   position: sticky;
   top: 0;
-  z-index: 2;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 2px solid red;
+  z-index: 1;
 }
 
-h1 {
+nav > h1 {
   padding: 30px;
+}
+
+nav > a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: white;
+}
+
+nav > a:hover {
+  color: red;
 }
 
 .links {
   margin-left: auto;
-  color: white;
 }
