@@ -4,7 +4,6 @@ import useFetch from "../hooks/useFetch";
 
 const ProductView = () => {
   const { id } = useParams();
-  console.log(id);
   const {
     data: product,
     error,

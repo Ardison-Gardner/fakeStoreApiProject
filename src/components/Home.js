@@ -6,7 +6,7 @@ const Home = () => {
     data: products,
     pending,
     error,
-  } = useFetch("https://fakestoreapi.com/products?limit=40");
+  } = useFetch("https://fakestoreapi.com/products");
 
   return (
     <div className="home">
