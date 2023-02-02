@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (url) => {
+const useFetch = (url, callback) => {
   const [data, setData] = useState([]);
   const [pending, setPending] = useState(true);
   const [error, setError] = useState("");
@@ -19,7 +19,10 @@ const useFetch = (url) => {
           setPending(false);
           setData(data);
           setError(null);
-          console.log({ data });
+          callback((prevState) => ({
+            ...prevState,
+            products: data,
+          }));
         })
         .catch((err) => {
           setPending(false);
